@@ -5,3 +5,6 @@ C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\obj\Debug\HelloWorld
 C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
 C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
 C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
+C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\bin\Debug\Newtonsoft.Json.dll
+C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\bin\Debug\Newtonsoft.Json.xml
+C:\Users\l.rosellini\Documents\Csharp\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CopyComplete

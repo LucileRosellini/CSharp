@@ -9,11 +9,9 @@ namespace HelloWorld
     class Program
     {
         static void Main(string[] args)
+           
         {
-
-            
-            string Name= "Bill";
-            Console.WriteLine("Hello "+ Name);
+            Console.WriteLine("Hello: {0}", Environment.UserName);
             Console.ReadLine();
         }
 
