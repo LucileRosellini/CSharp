@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 namespace HelloWorld
 {
 
-  
-
+ 
     public class Message
     {
+      private DateTime property
+        {
+            get;
+            set;
+        }
+
+
       public string GetMessageByTime () {
 
-            DateTime currentTime = DateTime.Now;
+            property = DateTime.Now;
 
-            switch (GetPlageHoraire(currentTime))
+            switch (GetPlageHoraire(property))
             {
                 case 0:
                     return "Bon Week-end " + Environment.UserName;
