@@ -12,11 +12,8 @@ namespace HelloWorld
         static void Main(string[] args)
            
         {
-
-            DateTime currentTime = DateTime.Now;
             Message message = new Message();
-            message.GetMes
-            
+            Console.WriteLine(message.GetMessageByTime());
             Console.ReadLine();
         }
 

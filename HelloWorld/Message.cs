@@ -6,30 +6,35 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
+
+  
+
     public class Message
     {
-      public static string GetMessageByTime (DateTime LesMessages) { 
-            
+      public string GetMessageByTime () {
+
+            DateTime currentTime = DateTime.Now;
+
             switch (GetPlageHoraire(currentTime))
             {
                 case 0:
-                    Console.WriteLine("Bon Week-end: {0}", Environment.UserName);
+                    return "Bon Week-end " + Environment.UserName;
                     //Bon week-end <nom_de_l’utilisateur> » pour la tranche horaire vendredi 18h - lundi 9h
                     break;
                 case 1:
-                    Console.WriteLine("Bonjour: {0}", Environment.UserName);
+                    return "Bonjour " + Environment.UserName;
                     //Bonjour <nom_de_l’utilisateur> » pour la tranche horaire 9h - 13h
                     break;
                 case 2:
-                    Console.WriteLine("Bon Aprés-midi: {0}", Environment.UserName);
+                    return "Bon Aprés-midi " + Environment.UserName;
                     //Bon après-midi <nom_de_l’utilisateur> » pour la tranche 13h - 18h 
                     break;
                 case 3:
-                    Console.WriteLine("Bonsoir: {0}", Environment.UserName);
+                    return "Bonsoir " + Environment.UserName;
                     //Bonsoir < nom_de_l’utilisateur > » pour la tranche horaire 18h - 9h
                     break;
                 default:
-                    Console.WriteLine("Pas pris en charge! : {0}", GetPlageHoraire(currentTime));
+                    return "Pas pris en charge! ";
                     break;
             }
 
