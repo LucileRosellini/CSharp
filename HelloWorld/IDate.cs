@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    public class Date: IDate
+    public interface IDate
     {
-        public DateTime GetTime()
-        {
-            return DateTime.Now;
-        }
+        DateTime GetTime();
+
     }
 }
