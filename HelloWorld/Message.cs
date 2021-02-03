@@ -11,6 +11,7 @@ namespace HelloWorld
     public class Message
     {
         private Name name;
+        private Date date;
     
       //injection de dependance depuis l'exterieur. 
 
@@ -19,31 +20,24 @@ namespace HelloWorld
             // Creer un message en utilisation "normale".
 
             this.name = new Name();
+            this.date = new Date();
         }
 
-        public Message(Name name) {
+        public Message(Name name , Date date) {
 
             //creer un message customisé - 
             //Pour les test. Construction d'injection de dependance création de l'objet name à l'interieur de la classe. 
 
             this.name = name;
+            this.date = date;
         }
 
-        
 
-      private DateTime property
-        {
-            get;
-            set;
-        }
 
 
       public string GetMessageByTime () {
 
-            property = DateTime.Now;
-            
-
-            switch (GetPlageHoraire(property))
+            switch (GetPlageHoraire())
             {
                 case 0:
                     return "Bon Week-end " + name.GetName();
@@ -64,11 +58,12 @@ namespace HelloWorld
                 default:
                     return "Pas pris en charge! ";
                     break;
-            }
+            }      
 
-       int GetPlageHoraire(DateTime valeur)
+         int GetPlageHoraire()
         {
-            if ((valeur.DayOfWeek == DayOfWeek.Saturday) || (valeur.DayOfWeek == DayOfWeek.Sunday))
+                DateTime valeur = date.GetTime();
+                if ((valeur.DayOfWeek == DayOfWeek.Saturday) || (valeur.DayOfWeek == DayOfWeek.Sunday))
             {
                 return (0);
             }
@@ -80,7 +75,7 @@ namespace HelloWorld
             {
                 return (2);
             }
-            else if ((valeur.Hour > 18) & (valeur.Hour < 9))
+            else if ((valeur.Hour > 18) || (valeur.Hour < 9))
             {
                 return (3);
             }

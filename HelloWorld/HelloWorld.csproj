@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Date.cs" />
     <Compile Include="Name.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Program.cs" />
