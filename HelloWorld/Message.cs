@@ -10,6 +10,27 @@ namespace HelloWorld
  
     public class Message
     {
+        private Name name;
+    
+      //injection de dependance depuis l'exterieur. 
+
+        public Message()
+        {
+            // Creer un message en utilisation "normale".
+
+            this.name = new Name();
+        }
+
+        public Message(Name name) {
+
+            //creer un message customisé - 
+            //Pour les test. Construction d'injection de dependance création de l'objet name à l'interieur de la classe. 
+
+            this.name = name;
+        }
+
+        
+
       private DateTime property
         {
             get;
@@ -20,23 +41,24 @@ namespace HelloWorld
       public string GetMessageByTime () {
 
             property = DateTime.Now;
+            
 
             switch (GetPlageHoraire(property))
             {
                 case 0:
-                    return "Bon Week-end " + Environment.UserName;
+                    return "Bon Week-end " + name.GetName();
                     //Bon week-end <nom_de_l’utilisateur> » pour la tranche horaire vendredi 18h - lundi 9h
                     break;
                 case 1:
-                    return "Bonjour " + Environment.UserName;
+                    return "Bonjour " + name.GetName();
                     //Bonjour <nom_de_l’utilisateur> » pour la tranche horaire 9h - 13h
                     break;
                 case 2:
-                    return "Bon Aprés-midi " + Environment.UserName;
+                    return "Bon Aprés-midi " + name.GetName();
                     //Bon après-midi <nom_de_l’utilisateur> » pour la tranche 13h - 18h 
                     break;
                 case 3:
-                    return "Bonsoir " + Environment.UserName;
+                    return "Bonsoir " + name.GetName();
                     //Bonsoir < nom_de_l’utilisateur > » pour la tranche horaire 18h - 9h
                     break;
                 default:
