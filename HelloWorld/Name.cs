@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Class1
+    public class Name
     {
+        public string GetName()
+        {
+            return Environment.UserName;
+        }
+
+
     }
 }
