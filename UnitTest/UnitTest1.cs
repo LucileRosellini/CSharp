@@ -8,14 +8,37 @@ namespace UnitTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
-
+        public void TestApresMidi()
         {
-            Date TestDate = new Date();
-            DateTime CompareDate = new DateTime(2008, 11, 1, 13, 45, 10);
+            FakeDateApresMidi TestDate = new FakeDateApresMidi();
+            Name TestName = new Name();
 
-            Assert.AreEqual(TestDate.GetTime(), CompareDate);
-      
+            Message MockMessage = new Message( TestName , TestDate);
+
+            Assert.AreEqual(MockMessage.GetMessageByTime(), "Bon Aprés-midi " + Environment.UserName);
+        }
+
+        [TestMethod]
+        public void TestWeekEnd()
+        {
+            FakeDateWeekEnd TestDate = new FakeDateWeekEnd();
+            Name TestName = new Name();
+
+            Message MockMessage = new Message(TestName, TestDate);
+
+            Assert.AreEqual(MockMessage.GetMessageByTime(), "Bon Week-end " + Environment.UserName);
+        }
+
+        [TestMethod]
+        public void TestFaux()
+        {
+            FakeDateApresMidi TestDate = new FakeDateApresMidi();
+            Name TestName = new Name();
+
+            Message MockMessage = new Message(TestName, TestDate);
+
+            Assert.AreNotEqual(MockMessage.GetMessageByTime(), "Bonsoir " + Environment.UserName);
+            //AreNotEqual /!/ Pour confirmer que c'est faux. Ici que cette heure ci est pas le soir. 
         }
     }
 }
