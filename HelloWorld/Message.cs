@@ -10,7 +10,7 @@ namespace HelloWorld
  
     public class Message
     {
-        private Name name;
+        private IName name;
         private IDate date;
     
       //injection de dependance depuis l'exterieur. 
@@ -23,7 +23,7 @@ namespace HelloWorld
             this.date = new Date();
         }
 
-        public Message(Name name , IDate date) {
+        public Message(IName name , IDate date) {
 
             //creer un message customisé - 
             //Pour les test. Construction d'injection de dependance création de l'objet name à l'interieur de la classe. 

@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FakeName.cs" />
     <Compile Include="FakeDateWeekEnd.cs" />
     <Compile Include="FakeDateApresMidi.cs" />
     <Compile Include="UnitTest1.cs" />

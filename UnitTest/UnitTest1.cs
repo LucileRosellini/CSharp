@@ -19,6 +19,18 @@ namespace UnitTest
         }
 
         [TestMethod]
+        public void TestName()
+        {
+            FakeName TestName = new FakeName();
+            FakeDateApresMidi TestDate = new FakeDateApresMidi();
+
+            Message MockMessage = new Message(TestName, TestDate);
+
+            Assert.AreEqual(MockMessage.GetMessageByTime(), "Bon Aprés-midi " + "toto");
+        }
+
+
+        [TestMethod]
         public void TestWeekEnd()
         {
             FakeDateWeekEnd TestDate = new FakeDateWeekEnd();

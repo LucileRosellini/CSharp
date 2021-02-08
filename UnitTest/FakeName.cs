@@ -1,18 +1,18 @@
-﻿using System;
+﻿using HelloWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld
+namespace UnitTest
 {
-    public class Name: IName
+    class FakeName : IName
+
     {
         public string GetName()
         {
-            return Environment.UserName;
+            return "toto";
         }
-
-
     }
 }
