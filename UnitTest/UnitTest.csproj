@@ -91,6 +91,10 @@
       <Project>{f9237628-058f-4a27-8cb9-fe3a84dc9fbd}</Project>
       <Name>TransportMetro</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{e971eb08-bd66-4403-ba74-525dcbd05e48}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
