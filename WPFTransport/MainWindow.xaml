@@ -38,11 +38,11 @@
         <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Rayon:" HorizontalAlignment="Right"/>
         <TextBox Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding Rayon, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
 
-        <Button Command="{Binding Submit, UpdateSourceTrigger=PropertyChanged}"  Grid.Column="0" Grid.Row="4" Margin="4" Content="Submit" HorizontalAlignment="Right"/>
+        <Button Command="{Binding Submit}"  Grid.Column="0" Grid.Row="4" Margin="4" Content="Submit" HorizontalAlignment="Right"/>
 
         <Label Grid.Column="0" Grid.Row="5" Margin="4" Content="Coordonnés:" HorizontalAlignment="Right"/>
         <TextBlock Grid.Column="1" Grid.Row="5" Margin="4" Text="{Binding Coord, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
-
+<TextBlock />
 
     </Grid>
 </Window>

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace WPFTransport.ViewModel
 {
@@ -17,22 +19,33 @@ namespace WPFTransport.ViewModel
       
         public ControlLocalisation()
         {
+            this.Submit = new Command(HelloWorld);
         }
+        private void HelloWorld() {
+            MessageBox.Show("Hello, world!");
+
+        }
+
+        public ICommand Submit { get; set; }
 
 
         public string Coord { get { return "Latitude : " + Latitude + "Longitude : " + Longitude; } }
 
-        public LignesEtArrets lignesEtArrets { get; set; }
-
+        public LignesEtArrets LignesEtArrets { get; set; }
+        //Property mettre de majuscules au debut et _ devant les variables privée.
 
 
        
             private string _latitude;
             private string _longitude;
             private string _rayon;
+
             private bool _isValid;
 
             public event PropertyChangedEventHandler PropertyChanged;
+
+
+    
 
             public string Latitude
             {
